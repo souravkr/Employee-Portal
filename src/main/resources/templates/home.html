@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+<h2 class="h2 text-primary "> Welcome to Employee Portal</h2>
+
+<hr class="h2 text-secondary"></hr>
+
+
+<a th:href="@{showForm}" class="btn btn-primary btn-sm mb-3">Add Employee</a>
+
+<table class="table table-bordered table-striped">
+<thead class="thead-dark">
+<tr>
+<th>ID</th>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Email</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tr th:each="tempemp : ${employees}">
+
+ <td th:text="${tempemp.id}"/>
+ <td th:text="${tempemp.firstName}"/>
+ <td th:text="${tempemp.lastName}"/>
+  <td th:text="${tempemp.email}"/>
+
+   <td>
+     <a th:href="@{/employees/updateForm/(employeeId=${tempemp.id})}" class="btn btn-success btn-sm"> Update</a> ||
+     <a th:href="@{/employees/deleteForm/(employeeId=${tempemp.id})}"
+     onClick = 	"if (!(confirm('Are you sure you want to delete this employee?'))) return false"
+     class="btn btn-danger btn-sm"
+     > Delete</a>
+   
+     </td>
+   
+</tr>
+
+
+</table>
+
+</div>
+</body>
+
+</html>
