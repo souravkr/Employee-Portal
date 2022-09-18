@@ -1,7 +1,5 @@
 # Employee-Portal
 
-# Warranty Tracker
-
 This is an Employee Portal, Which has simple CRUD Operations. Add an Employee, Delete an Employee, View Employees, Update an Employee, 
 
 You can add your Device name, Date when you purchased it,
@@ -38,6 +36,9 @@ Clone my-project with git
 
 ![Screenshot (689)](https://user-images.githubusercontent.com/28059198/175801648-7484a7e0-4435-4d64-a4eb-f56b5f2080ae.png)
 
+![image](https://user-images.githubusercontent.com/28059198/190898441-790d7435-e7a4-4978-8c05-3108c6b6de05.png)
+
+![image](https://user-images.githubusercontent.com/28059198/190898452-22400b5a-5f85-453d-a655-c6eaa51905b4.png)
 
 
 
